@@ -1,7 +1,7 @@
 *{
 box-sizing: border-box;
 font-family: 'Roboto', sans-serif;
--webkit-transition-duration: 0.4s;
+-webkit-transition-duration: 1s;
 }
 
 
@@ -12,7 +12,6 @@ height: 100%;
 margin: 0px;
 padding: 0px;
 width: 100%;
-background: tomato;
 
 }
 
@@ -82,6 +81,7 @@ text-align: center;
 .m_nav_item a{
 		text-decoration: none;
 		color: #111;
+		font-size: 1em;
 		font-family: 'Bree Serif', serif !important;
 		-webkit-transition-duration: 0.5s;
 }
@@ -149,7 +149,7 @@ Media queries!*/
 
 
 .m_nav_item a {
-	font-size: 2vw;
+	font-size: 1.5em;
 	margin-top: 30px;
 
 }
