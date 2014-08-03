@@ -1,0 +1,177 @@
+*{
+box-sizing: border-box;
+font-family: 'Roboto', sans-serif;
+-webkit-transition-duration: 0.4s;
+}
+
+
+
+html,
+body {
+height: 100%;
+margin: 0px;
+padding: 0px;
+width: 100%;
+background: tomato;
+
+}
+
+
+
+/*wrapper element holding all content except the nav bar
+*/
+#wrapper{
+background-image: url('../yosemite.jpg');
+background-size: cover;
+position: absolute;
+top: 0px;
+width: 100%;
+height: 100%;
+text-align: center;
+
+}
+
+
+/*classes used to push the wrapper down when the navbar is expanded
+*/
+
+.open_wrapper{
+	top: 200px !important;
+}
+
+.closed_wrapper{
+	top: 0px !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*The container that holds all m_nav elements*/
+
+#m_nav_container{
+	
+	width: 100%;
+	height: 230px;
+	background-color: #fff;
+	position: fixed;
+	top: 0px;
+}
+
+
+/*The hamburger menu itself*/
+
+
+#m_nav_list{
+
+	list-style: none;
+}
+
+.m_nav_item{
+	margin-top: 15px;
+}
+
+.m_nav_item a{
+		text-decoration: none;
+		color: #111;
+		font-family: 'Bree Serif', serif !important;
+		-webkit-transition-duration: 0.5s;
+}
+
+.m_nav_item a:hover{
+	color: tomato;
+}
+
+#m_nav_menu{
+	
+	width: 45px;
+	height: 45px;
+	position: absolute;
+	background: rgba(0, 0, 0, 0);
+	top: 30px;
+	right: 40px;
+	z-index: 200;
+
+}
+
+.m_nav_ham{
+	
+	width: 35px;
+	height: 5px;
+	background: #fff;
+	margin: 5px auto;
+
+}
+
+
+/*classes used to change the button's format based on jquery toggle
+*/
+.button_open{
+	background: #333;
+}
+
+
+.button_closed{
+
+}
+
+
+
+
+/*
+Media queries!*/
+
+
+@media screen and (min-width: 740px){
+
+
+
+/*Nav bar media queries!*/
+#m_nav_container{
+	text-align: center;
+	height: 150px !important;
+
+}
+
+.m_nav_item {
+	display: inline;
+	line-height: 100px;
+	margin-right: 100px;
+}
+
+
+.m_nav_item a {
+	font-size: 2vw;
+	margin-top: 30px;
+
+}
+
+#m_nav_item_1{
+	margin-left: 50px;
+}
+
+
+#m_nav_menu:before{
+content: "MENU";
+color: white;
+}
+
+
+
+/*wrapper media queries*/
+
+
+.open_wrapper{
+	top: 130px !important;
+}
+
+}
+
