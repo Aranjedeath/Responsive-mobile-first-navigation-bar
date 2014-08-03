@@ -1,13 +1,6 @@
 $(document).ready(function(){
 
-if($(window).width() > "740px"){
-	$("#m_nav_container_").show();
-}
-else{
-	$("#m_nav_container_").hide();
-}
-
-$(window).resize(toggle_nav_container());
+toggle_nav_container();
 
 });
 
