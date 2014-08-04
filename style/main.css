@@ -14,7 +14,7 @@ Max-usefullness: minimal;
 *{
 box-sizing: border-box;
 font-family: 'Roboto', sans-serif;
--webkit-transition-duration: 1s;
+-webkit-transition-duration: 0.3s;
 }
 
 html,
@@ -24,6 +24,16 @@ margin: 0px;
 padding: 0px;
 width: 100%;
 
+}
+
+p{
+	color: white;
+	font-weight: 300;
+	size: 1.1em;
+	display: block;
+	width: 70%;
+	margin: auto;
+	text-align: justify;
 }
 
 
@@ -63,9 +73,9 @@ text-align: center;
 #m_nav_container{
 	
 	width: 100%;
-	height: 230px;
+	height: 200px;
 	background-color: #fff;
-	position: absolute;
+	position: fixed;
 	display: none;
 /*	opacity: 0;*/
 	top: 0px;
@@ -87,9 +97,10 @@ text-align: center;
 
 .m_nav_item a{
 		text-decoration: none;
-		color: #111;
+		color: #333;
 		font-size: 1.0em;
 		font-family: 'Bree Serif', serif !important;
+
 		-webkit-transition-duration: 0.5s;
 }
 
@@ -103,6 +114,7 @@ text-align: center;
 .container_open{
 	position: fixed !important;
 	display: block;
+	height: 120px;
 }
 
 
@@ -122,7 +134,7 @@ text-align: center;
 	background: rgba(0, 0, 0, 0);
 	top: 30px;
 	right: 40px;
-	z-index: 2;
+	z-index: 3;
 
 }
 /*class applied to create the lines*/
@@ -137,6 +149,20 @@ text-align: center;
 }
 
 
+.m_nav_ham_1_open{
+	-webkit-transform: rotate(45deg);
+	margin-top: 15px;
+}
+.m_nav_ham_2_open{
+	-webkit-transform: rotate(-45deg);
+	margin-top: -10px;
+}
+
+.m_nav_ham_3_open{
+	opacity: 0;
+}
+
+
 /*classes used to change the button's format based on jquery toggle
 In future releases this will be used to animate the m_nav_ham divs to form 
 an X*/
@@ -144,6 +170,7 @@ an X*/
 
 .button_open{
 	background: #333;
+/*	-webkit-transform: rotate(45deg);*/
 }
 
 
@@ -162,17 +189,17 @@ an X*/
 	height: 700px;
 	/*background-image: url('../yosemite.jpg');
 	background-size: cover;*/
-	background: #4787ff
+/*	background: #4787ff*/
 	float: left;
 	text-align: center;
 	margin-top: 0px;
 }
 
-#header h1{
+/*#header*/ h1{
 	font-weight: 300;
 	font-size: 6rem;
 	color: white;
-	padding-top: 200px;
+	padding-top: 80px;
 
 }
 
@@ -184,7 +211,7 @@ an X*/
 
 .main_sections {
 	 width: 100%;
-	height: 1000px;
+	height: 1100px;
 	text-align: center;
 	margin-top: 0px;
 	float: left;
@@ -209,7 +236,7 @@ an X*/
 
 #section_2 {
 	
-	background-color: teal;
+	background-color: #47e3ff;
 
 }
 
@@ -218,8 +245,12 @@ an X*/
 
 #section_3 {
 	
-	background-color: blue;
+	background-color: #47ffbf;
 
+}
+
+#section_3 p, #section_3 h1{
+	color: #333 !important;
 }
 
 /*      Section 4
@@ -227,7 +258,7 @@ an X*/
 
 #section_4 {
 	
-	background-color: purple;
+	background-color: #6347ff;
 
 }
 
@@ -236,7 +267,7 @@ an X*/
 
 #section_5 {
 	
-	background-color: green;
+	background-color: #ffbf47;
 
 }
 
@@ -262,14 +293,14 @@ an X*/
 
 /*Media query for all non-mobile devices*/
 
-@media screen and (min-width: 865px){
+@media screen and (min-width: 780px){
 
 
 
 /*Nav bar media queries!*/
 #m_nav_container{
 	text-align: left;
-	height: 150px !important;
+	height: 120px !important;
 
 }
 
@@ -317,8 +348,9 @@ color: white;
 #m_nav_container{
 	text-align: center;
 	height: 110px !important;
-	position: fixed;
-	z-index: 3;
+/*	position: fixed;
+	top: 0;*/
+/*	z-index: 0 !important;*/
 }
 
 .m_nav_item {
