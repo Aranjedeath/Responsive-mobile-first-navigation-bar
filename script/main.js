@@ -1,6 +1,8 @@
 $(document).ready(function(){
 
 toggle_nav_container();
+toggle_nav_zindex();
+
 
 });
 
@@ -8,16 +10,13 @@ toggle_nav_container();
 
 var toggle_nav_container = function () {
 
-	
+
 
 	var 	$toggleButton = $('#toggle_m_nav');
 			$navContainer = $('#m_nav_container');
 			$menuButton = $('#m_nav_menu')
 			$menuButtonBars = $('.m_nav_ham');
 			$wrapper = $('#wrapper');
-	// hide the menu by default, show the menu button
-	$menuButton.show();
-
 
 	// toggle the container on click of button (can be remapped to $menuButton)
 
@@ -29,27 +28,29 @@ var toggle_nav_container = function () {
 		// if statement to determine whether the nav container is already toggled or not
 
 		if($navContainer.is(':hidden'))
-		{
-			$navContainer.slideDown('slow');
-			$menuButtonBars.removeClass('button_closed')
-			$menuButtonBars.addClass('button_open')
+		{	
 			$wrapper.removeClass('closed_wrapper')
 			$wrapper.addClass("open_wrapper")
+			$navContainer.slideDown(1500).addClass('container_open').delay(2000).css("z-index", "1");
+			$menuButtonBars.removeClass('button_closed')
+			$menuButtonBars.addClass('button_open')
+
 		}
 		else
 		{
-			$navContainer.slideUp('slow');
+			$navContainer.css("z-index", "0").removeClass('container_open').slideUp(1500)
 			$menuButtonBars.removeClass('button_open')
 			$menuButtonBars.addClass('button_closed')
 			$wrapper.removeClass('open_wrapper')
-			$wrapper.addClass("closed_wra")		}
+			$wrapper.addClass("closed_wrapper")		}
 	});
 
 
 
-
-
 }
+
+
+
 
 
 
